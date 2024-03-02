@@ -6,12 +6,26 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
 config/name="Godot-strategy"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
+
+[autoload]
+
+Signals="*res://control/signals.gd"
+
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=450
+window/size/initial_position=Vector2i(480, 270)
+window/size/always_on_top=true
+window/stretch/mode="viewport"
 
 [physics]
 
@@ -19,4 +33,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/defaults/default_environment="res://default_env.tres"

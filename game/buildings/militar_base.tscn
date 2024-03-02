@@ -1,19 +1,21 @@
 [gd_scene load_steps=3 format=3 uid="uid://30bbgmjvrif6"]
 
 [ext_resource type="Script" path="res://game/buildings/militar_base.gd" id="1_3gjom"]
-[ext_resource type="Texture2D" uid="uid://dbaaux3exmkmk" path="res://assets/images/units.png" id="1_vi1yd"]
+[ext_resource type="Texture2D" uid="uid://cebysioe0amfw" path="res://assets/images/units.png" id="1_vi1yd"]
 
-[node name="MilitarBase" type="Node2D"]
-script = ExtResource("1_3gjom")
-
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="MilitarBase" type="ColorRect"]
+layout_direction = 2
 offset_left = -7.0
 offset_top = -7.0
 offset_right = 7.0
 offset_bottom = 7.0
+script = ExtResource("1_3gjom")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3
+position = Vector2(7, 7)
 texture = ExtResource("1_vi1yd")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
